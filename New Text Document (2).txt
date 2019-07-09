@@ -1,0 +1,22 @@
+<?php
+$mailTo ="yousafctproducts.net";
+$name=$_POST['name'];
+$mailFrom=$_POST['email'];
+$subject = $_POST['subject'];
+$message = $_POST['message'];
+
+$headers="From: ".$mailFrom;
+$txt="you have received an email from ". "\r".$name.".\n\n".$message;
+
+if (mail($mailTo,$subject,$txt,$headers)) {
+    
+    header("location:https://www.ctproducts.net/msgsend.php"); 
+die();
+  
+	}
+	else{
+	   
+	}
+
+
+?>
